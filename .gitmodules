@@ -1,0 +1,37 @@
+[submodule "deps/Voron2.4"]
+	path = deps/Voron2.4
+	url = https://github.com/VoronDesign/Voron-2
+	branch = Voron2.4
+	shallow = true
+[submodule "deps/Stealthburner"]
+	path = deps/Stealthburner
+	url = https://github.com/VoronDesign/Voron-Stealthburner
+	shallow = true
+[submodule "deps/BTT-EBB"]
+	path = deps/BTT-EBB
+	url = https://github.com/bigtreetech/EBB
+	shallow = true
+[submodule "deps/Tap"]
+	path = deps/Tap
+	url = https://github.com/VoronDesign/Voron-Tap
+	shallow = true
+[submodule "deps/VoronUsers"]
+	shallow = true
+	path = deps/VoronUsers
+	url = https://github.com/VoronDesign/VoronUsers
+[submodule "deps/3DO-Nozzle-Cam"]
+	shallow = true
+	path = deps/3DO-Nozzle-Cam
+	url = https://github.com/3DO-EU/nozzle-camera
+[submodule "deps/Nevermore"]
+	shallow = true
+	path = deps/Nevermore
+	url = https://github.com/nevermore3d/Nevermore_Micro
+[submodule "deps/EnragedRabbit"]
+	shallow = true
+	path = deps/EnragedRabbit
+	url = https://github.com/EtteGit/EnragedRabbitProject
+[submodule "deps/FYSETC-ERB"]
+	shallow = true
+	path = deps/FYSETC-ERB
+	url = https://github.com/FYSETC/FYSETC-ERB

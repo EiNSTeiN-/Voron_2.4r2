@@ -9,6 +9,7 @@
 * [AngryCam](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/chri.kai.in/Angry_CAM_USB) with [OV5648 120 degrees](https://www.aliexpress.com/item/1005003720999994.html?spm=a2g0o.order_list.order_list_main.23.7d751802cmCV6f)
 * [Titanium backers](https://www.3dlabtech.ca/product/titanium-backers-for-voron-2-and-trident/)
 * [3DO Nozzle cam](https://kb-3d.com/store/electronics/779-3do-nozzle-camera-kit.html)
+* [ERCF 9 color](https://www.aliexpress.com/item/1005004537312582.html?spm=a2g0o.order_list.order_list_main.5.56561802Y1YjM8)
 
 #### Printed parts
 * Voron 2.4r2: https://github.com/VoronDesign/Voron-2/tree/Voron2.4
@@ -24,6 +25,7 @@
 * Enclosure lights: https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/eddie/LED_Bar_Clip
 * PTFE tube retainer: https://www.printables.com/model/336325-voron-24-modified-bowden-tube-retainer
 * Nevermore: https://github.com/nevermore3d/Nevermore_Micro
+* Enraged Rabbit multi-material: https://github.com/EtteGit/EnragedRabbitProject
 
 #### Software
 
