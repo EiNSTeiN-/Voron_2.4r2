@@ -4,8 +4,6 @@ import shutil
 import os
 import re
 
-output_dir = "STLs"
-
 copies = [
 	dict(
         dir = "deps/Voron2.4/STLs",
@@ -89,7 +87,11 @@ copies = [
         dir = "deps/Voron2.4/STLs",
         files = [
             "Electronics_Bay/Controller_Mounts/Octopus_bracket_set.stl",
-            "Electronics_Bay/{lrs_200_psu_bracket_x2,PSU_stabilizer_50mm,raspberrypi_bracket}.stl",
+            "Electronics_Bay/lrs_200_psu_bracket_x2.stl",
+            "Electronics_Bay/pcb_din_clip_x3.stl",
+            "Electronics_Bay/PSU_stabilizer_50mm.stl",
+            "Electronics_Bay/raspberrypi_bracket.stl",
+            "Electronics_Bay/rs25_psu_bracket.stl",
         ],
         output = "STLs/Electronics"
     ),
@@ -104,21 +106,30 @@ copies = [
         output = "STLs/Gantry"
     ),
 	dict(
+        dir = "deps/beacon-probe-mount-for-voron-tap-stealthburner-model_files",
+        files = [
+            "tap becon v6.stl",
+        ],
+        output = "STLs/Gantry"
+    ),
+	dict(
         dir = "deps/Tap/STLs",
         files = [
-            "MGN9_Assembly_Tool.stl",
-            "Printed_Cut_Guide.stl",
+            "[a]Tap_Center_r6.stl",
+            "Tap_Front_r2.stl",
+            "Tap_Magnet_{Left,Right}_r2.stl",
+            "Tap_Upper_PCB_r2.stl",
         ],
-        output = "STLs/Tools/Tap"
+        output = "STLs/Gantry"
     ),
 	dict(
         dir = "deps/Stealthburner/STLs",
         files = [
-            "Stealthburner/[a]_stealthburner_main_body.stl",
             "Stealthburner/[c]_stealthburner_LED_diffuser.stl",
-            "Stealthburner/[o]_stealthburner_LED_{carrier,diffuser_mask}.stl",
+            "Stealthburner/[o]_stealthburner_LED_diffuser_mask.stl",
+            "Stealthburner/[o]_stealthburner_LED_carrier.stl",
             "Stealthburner/Printheads/phaetus_dragon/stealthburner_printhead_dragon_{front,rear_cw2}.stl",
-            "Stealthburner/ADXL345_Mounts/{sb_adxl_mount_generic_15.5mm_c_c,sb_adxl_washer_x2}.stl",
+            "Stealthburner/ADXL345_Mounts/sb_adxl_{mount_generic_15.5mm_c_c,washer_x2}.stl",
             "Clockwork2/motor_plate.stl",
             "Clockwork2/[a]_guidler_{a,b}.stl",
             "Clockwork2/[a]_{latch_shuttle,latch,pcb_spacer}.stl",
@@ -165,6 +176,13 @@ copies = [
         dir = "deps/VoronUsers/printer_mods/eddie/LED_Bar_Clip",
         files = [
             "LED_Bar_Clip_Misumi_version2.stl",
+        ],
+        output = "STLs/Accessories"
+    ),
+	dict(
+        dir = "deps/voron-24-modified-bowden-tube-retainer-model_files/",
+        files = [
+            "BowdenHolder Mod1.stl",
         ],
         output = "STLs/Accessories"
     ),
