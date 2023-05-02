@@ -1,8 +1,11 @@
 from braceexpand import braceexpand
 from boltons import fileutils
-import shutil
+import shutil, shlex
 import os
 import re
+
+slicer_bin = '/home/einstein/PrusaSlicer-2.5.0+linux-x64-GTK3-202209060725.AppImage'
+slicer_options = '--export-stl --ensure-on-bed --repair --output %s %s %s'
 
 copies = [
 	dict(
@@ -110,15 +113,15 @@ copies = [
         dir = "deps/tapchanger/stls",
         files = [
             "Shuttle/[a] Shuttle.stl",
-            "Shuttle/[tpu] Plug-6mm.stl",
-            "Stealthburner plate/Front.stl",
+            dict(file="Shuttle/[tpu] Plug-6mm.stl",rotate_x=270),
+            dict(file="Stealthburner plate/Front.stl",rotate_x=90),
             "Stealthburner plate/Tap_Magnet_{Left,Right}_r2.stl",
             "Dock/Dock{Base,NozzlePad,Pivot}.stl",
-            "Distribution Box/[tpu] Clip.stl_x6.stl",
-            "Distribution Box/[tpu] Strain_relief-Curved.stl",
-            "Distribution Box/[tpu] Strain_relief.stl",
-            "Distribution Box/Distribution_box.stl",
-            "Distribution Box/Exhaust_cover.stl",
+            dict(file="Distribution Box/[tpu] Clip.stl_x6.stl",rotate_x=270),
+            dict(file="Distribution Box/[tpu] Strain_relief-Curved.stl",rotate_x=270),
+            dict(file="Distribution Box/[tpu] Strain_relief.stl",rotate_x=270),
+            dict(file="Distribution Box/Distribution_box.stl",rotate_x=270),
+            dict(file="Distribution Box/Exhaust_cover.stl",rotate_x=90),
         ],
         output = "STLs/tapchanger"
     ),
@@ -260,6 +263,11 @@ for entry in copies:
     fileutils.mkdir_p(output)
 
     for pattern in entry['files']:
+        options = []
+        if type(pattern) is dict:
+            if 'rotate_x' in pattern:
+                options.append("--rotate-x=%s" % (pattern['rotate_x']))
+            pattern = pattern['file']
         for file in braceexpand(pattern):
             basename = os.path.basename(file)
             src = f"{dir}/{file}"
@@ -267,5 +275,9 @@ for entry in copies:
             dst = re.sub(r"\.STL$", ".stl", dst)
             dst = re.sub(r"\[a\]([^_])", r"[a]_\1", dst)
 
-            shutil.copyfile(src, dst)
+            if len(options) > 0:
+                src = shlex.quote(src)
+                os.system("%s %s" % (slicer_bin,  slicer_options % (dst, ' '.join(options), src)))
+            else:
+                shutil.copyfile(src, dst)
             print(repr(src), "=>", repr(dst))
