@@ -78,8 +78,9 @@ copies = [
             "Panel_Mounting/{corner_panel_clip_4mm_x8,corner_panel_clip_6mm_x8}.stl",
             "Panel_Mounting/{midspan_panel_clip_4mm_x7,midspan_panel_clip_6mm_x8}.stl",
             "Panel_Mounting/{z_belt_cover_a_x2,z_belt_cover_b_x2}.stl",
-            "Exhaust_Filter/exhaust_filter_{grill,housing}.stl",
-            "Exhaust_Filter/[a]_{exhaust_fan_grill,exhaust_filter_mount_x2,filter_access_cover}.stl",
+            # "Exhaust_Filter/exhaust_filter_{grill,housing}.stl",
+            # "Exhaust_Filter/[a]_{exhaust_fan_grill,filter_access_cover}.stl",
+            "Exhaust_Filter/[a]_exhaust_filter_mount_x2.stl",
         ],
         output = "STLs/Panels"
     ),
@@ -95,36 +96,43 @@ copies = [
         ],
         output = "STLs/Electronics"
     ),
+	# dict(
+    #     dir = "deps/Tap/STLs",
+    #     files = [
+    #         "[a]Tap_Center_r6.stl",
+    #         "Tap_Front_r2.stl",
+    #         "Tap_Magnet_{Left,Right}_r2.stl",
+    #         "Tap_Upper_PCB_r2.stl",
+    #     ],
+    #     output = "STLs/Gantry"
+    # ),
 	dict(
-        dir = "deps/Tap/STLs",
+        dir = "deps/tapchanger/stls",
         files = [
-            "[a]Tap_Center_r6.stl",
-            "Tap_Front_r2.stl",
-            "Tap_Magnet_{Left,Right}_r2.stl",
-            "Tap_Upper_PCB_r2.stl",
+            "Shuttle/[a] Shuttle.stl",
+            "Shuttle/[tpu] Plug-6mm.stl",
+            "Stealthburner plate/Front.stl",
+            "Stealthburner plate/Tap_Magnet_{Left,Right}_r2.stl",
+            "Dock/Dock{Base,NozzlePad,Pivot}.stl",
+            "Distribution Box/[tpu] Clip.stl_x6.stl",
+            "Distribution Box/[tpu] Strain_relief-Curved.stl",
+            "Distribution Box/[tpu] Strain_relief.stl",
+            "Distribution Box/Distribution_box.stl",
+            "Distribution Box/Exhaust_cover.stl",
         ],
-        output = "STLs/Gantry"
+        output = "STLs/tapchanger"
     ),
 	dict(
         dir = "deps/beacon-probe-mount-for-voron-tap-stealthburner-model_files",
         files = [
             "tap becon v6.stl",
         ],
-        output = "STLs/Gantry"
-    ),
-	dict(
-        dir = "deps/Tap/STLs",
-        files = [
-            "[a]Tap_Center_r6.stl",
-            "Tap_Front_r2.stl",
-            "Tap_Magnet_{Left,Right}_r2.stl",
-            "Tap_Upper_PCB_r2.stl",
-        ],
-        output = "STLs/Gantry"
+        output = "STLs/tapchanger"
     ),
 	dict(
         dir = "deps/Stealthburner/STLs",
         files = [
+            "Stealthburner/[a]_stealthburner_main_body.stl",
             "Stealthburner/[c]_stealthburner_LED_diffuser.stl",
             "Stealthburner/[o]_stealthburner_LED_diffuser_mask.stl",
             "Stealthburner/[o]_stealthburner_LED_carrier.stl",
@@ -146,14 +154,14 @@ copies = [
         ],
         output = "STLs/Extruder"
     ),
-	dict(
-        dir = "deps/3DO-Nozzle-Cam/printers/Voron_Stealthburner",
-        files = [
-            "Cam_mount_SB.stl",
-            "PCB_mount_SB.stl",
-        ],
-        output = "STLs/Extruder"
-    ),
+	# dict(
+    #     dir = "deps/3DO-Nozzle-Cam/printers/Voron_Stealthburner",
+    #     files = [
+    #         "Cam_mount_SB.stl",
+    #         "PCB_mount_SB.stl",
+    #     ],
+    #     output = "STLs/Extruder"
+    # ),
 	dict(
         dir = "deps/Nevermore/V5_Duo/V2",
         files = [

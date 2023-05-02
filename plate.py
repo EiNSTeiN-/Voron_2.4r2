@@ -16,7 +16,7 @@ plates = [
             'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
             'STLs/Extruder/motor_plate.stl',
             'STLs/Extruder/CW2_Cable_Bridge.stl',
-            'STLs/Extruder/PCB_mount_SB.stl',
+            # 'STLs/Extruder/PCB_mount_SB.stl',
             'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
             'STLs/Extruder/sb_adxl_mount_generic_15.5mm_c_c.stl',
             { 'STLs/Extruder/sb_adxl_washer_x2.stl': 2 },
@@ -29,7 +29,7 @@ plates = [
             'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
             'STLs/Extruder/motor_plate.stl',
             'STLs/Extruder/CW2_Cable_Bridge.stl',
-            'STLs/Extruder/PCB_mount_SB.stl',
+            # 'STLs/Extruder/PCB_mount_SB.stl',
             'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
             'STLs/Extruder/sb_adxl_mount_generic_15.5mm_c_c.stl',
             { 'STLs/Extruder/sb_adxl_washer_x2.stl': 2 },
@@ -39,7 +39,7 @@ plates = [
     dict(
         source = [
             'STLs/Extruder/[a]_*.stl',
-            'STLs/Extruder/Cam_mount_SB.stl',
+            # 'STLs/Extruder/Cam_mount_SB.stl',
         ],
         output = "Plate/extruder_[a].stl"
     ),
@@ -74,13 +74,13 @@ plates = [
         ],
         output = "Plate/gantry_idlers.stl"
     ),
-    dict(
-        source = [
-            'STLs/Gantry/Tap_*.stl',
-            'STLs/Gantry/tap_*.stl',
-        ],
-        output = "Plate/gantry_tap.stl"
-    ),
+    # dict(
+    #     source = [
+    #         'STLs/Gantry/Tap_*.stl',
+    #         'STLs/Gantry/tap_*.stl',
+    #     ],
+    #     output = "Plate/gantry_tap.stl"
+    # ),
     dict(
         source = [
             'STLs/Gantry/xy_joint_{left,right}_{lower,upper}_MGN12.stl',
@@ -93,6 +93,34 @@ plates = [
             'STLs/Gantry/z_chain_{bottom_anchor,guide}.stl',
         ],
         output = "Plate/gantry_z.stl"
+    ),
+
+    ### tapchanger
+    dict(
+        source = [
+            'STLs/tapchanger/tap_becon_v6.stl',
+            'STLs/tapchanger/Front.stl',
+            'STLs/tapchanger/Tap_Magnet_{Left,Right}_r2.stl',
+            'STLs/tapchanger/Dock{Base,NozzlePad,Pivot}.stl',
+            {'STLs/tapchanger/Distribution_box.stl': 1}, # , 'rotate-x': 270},
+            {'STLs/tapchanger/Exhaust_cover.stl': 1}, # , 'rotate-x': 270},
+        ],
+        output = "Plate/tapchanger.stl"
+    ),
+    dict(
+        source = [
+            'STLs/tapchanger/[a]_Shuttle.stl',
+        ],
+        output = "Plate/tapchanger_[a].stl"
+    ),
+    dict(
+        source = [
+            {'STLs/tapchanger/[tpu]_Clip.stl_x6.stl': 1}, # , 'rotate-x': 270},
+            {'STLs/tapchanger/[tpu]_Strain_relief-Curved.stl': 1}, # , 'rotate-x': 270},
+            {'STLs/tapchanger/[tpu]_Strain_relief.stl': 1}, # , 'rotate-x': 270},
+            {'STLs/tapchanger/[tpu]_Plug-6mm.stl': 1}, # , 'rotate-x': 270},
+        ],
+        output = "Plate/tapchanger_[tpu].stl"
     ),
     
     ### Z Axis
@@ -154,8 +182,8 @@ plates = [
     dict(
         source = [
             { 'STLs/Panels/[a]_exhaust_filter_mount_x2.stl': 2 },
-            'STLs/Panels/[a]_exhaust_fan_grill.stl',
-            'STLs/Panels/[a]_filter_acess_cover.stl',
+            # 'STLs/Panels/[a]_exhaust_fan_grill.stl',
+            # 'STLs/Panels/[a]_filter_acess_cover.stl',
         ],
         output = "Plate/panels_[a].stl"
     ),
@@ -183,12 +211,12 @@ plates = [
         ],
         output = "Plate/panels_door.stl"
     ),
-    dict(
-        source = [
-            'STLs/Panels/exhaust_filter_{grill,housing}.stl',
-        ],
-        output = "Plate/exhaust.stl"
-    ),
+    # dict(
+    #     source = [
+    #         'STLs/Panels/exhaust_filter_{grill,housing}.stl',
+    #     ],
+    #     output = "Plate/exhaust.stl"
+    # ),
 
     ### Other
     dict(

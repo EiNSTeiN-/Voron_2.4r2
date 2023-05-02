@@ -35,3 +35,6 @@
 	shallow = true
 	path = deps/FYSETC-ERB
 	url = https://github.com/FYSETC/FYSETC-ERB
+[submodule "deps/tapchanger"]
+	path = deps/tapchanger
+	url = https://github.com/viesturz/tapchanger
