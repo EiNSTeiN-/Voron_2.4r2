@@ -129,6 +129,7 @@ copies = [
             "Stealthburner/[o]_stealthburner_LED_diffuser_mask.stl",
             "Stealthburner/[o]_stealthburner_LED_carrier.stl",
             "Stealthburner/Printheads/phaetus_dragon/stealthburner_printhead_dragon_{front,rear_cw2}.stl",
+            "Stealthburner/Printheads/revo_voron/stealthburner_printhead_revo_voron_{front,rear_cw2}.stl",
             "Stealthburner/ADXL345_Mounts/sb_adxl_{mount_generic_15.5mm_c_c,washer_x2}.stl",
             "Clockwork2/motor_plate.stl",
             "Clockwork2/[a]_guidler_{a,b}.stl",
@@ -180,9 +181,23 @@ copies = [
         output = "STLs/Accessories"
     ),
 	dict(
-        dir = "deps/voron-24-modified-bowden-tube-retainer-model_files/",
+        dir = "deps/voron-24-modified-bowden-tube-retainer-model_files",
         files = [
             "BowdenHolder Mod1.stl",
+        ],
+        output = "STLs/Accessories"
+    ),
+	dict(
+        dir = "deps/revo-connect-holders",
+        files = [
+            "{0.15,0.25,0.4,0.6,0.8,1.0} Nozzle Holder.stl",
+        ],
+        output = "STLs/Accessories"
+    ),
+	dict(
+        dir = "deps/revo-connect-voron-bracket/With M3 mounting hole",
+        files = [
+            "voron-bracket-revo-connect-6-mm-panel-m3-screw.3mf",
         ],
         output = "STLs/Accessories"
     ),
