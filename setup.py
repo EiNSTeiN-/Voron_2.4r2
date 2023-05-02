@@ -99,16 +99,16 @@ copies = [
         ],
         output = "STLs/Electronics"
     ),
-	# dict(
-    #     dir = "deps/Tap/STLs",
-    #     files = [
-    #         "[a]Tap_Center_r6.stl",
-    #         "Tap_Front_r2.stl",
-    #         "Tap_Magnet_{Left,Right}_r2.stl",
-    #         "Tap_Upper_PCB_r2.stl",
-    #     ],
-    #     output = "STLs/Gantry"
-    # ),
+	dict(
+        dir = "deps/Tap/STLs",
+        files = [
+            # "[a]Tap_Center_r6.stl",
+            # "Tap_Front_r2.stl",
+            # "Tap_Magnet_{Left,Right}_r2.stl",
+            "Tap_Upper_PCB_r2.stl",
+        ],
+        output = "STLs/tapchanger"
+    ),
 	dict(
         dir = "deps/tapchanger/stls",
         files = [
@@ -118,10 +118,12 @@ copies = [
             "Stealthburner plate/Tap_Magnet_{Left,Right}_r2.stl",
             "Dock/Dock{Base,NozzlePad,Pivot}.stl",
             dict(file="Distribution Box/[tpu] Clip.stl_x6.stl",rotate_x=270),
-            dict(file="Distribution Box/[tpu] Strain_relief-Curved.stl",rotate_x=270),
+            # dict(file="Distribution Box/[tpu] Strain_relief-Curved.stl",rotate_x=270),
             dict(file="Distribution Box/[tpu] Strain_relief.stl",rotate_x=270),
             dict(file="Distribution Box/Distribution_box.stl",rotate_x=270),
             dict(file="Distribution Box/Exhaust_cover.stl",rotate_x=90),
+            "Strain relief/[tpu] CableFlex.stl",
+            dict(file="Strain relief/StrainReliefAdapter.stl",rotate_x=180),
         ],
         output = "STLs/tapchanger"
     ),
@@ -152,8 +154,8 @@ copies = [
         dir = "deps/BTT-EBB/EBB SB2240_2209 CAN/Custom Printed Parts",
         files = [
             "{cable_door,main_body}_EBB_SB.stl",
-            "CW2 Cable Bridge.STL",
-            "Printed Part for CAN Cable.stl",
+            # "CW2 Cable Bridge.STL",
+            # "Printed Part for CAN Cable.stl",
         ],
         output = "STLs/Extruder"
     ),

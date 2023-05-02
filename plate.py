@@ -1,6 +1,6 @@
 from braceexpand import braceexpand
 from boltons import fileutils
-import shutil, shlex
+import shlex
 import os
 import re
 import glob
@@ -15,9 +15,9 @@ plates = [
             'STLs/Extruder/stealthburner_printhead_dragon_{front,rear_cw2}.stl',
             'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
             'STLs/Extruder/motor_plate.stl',
-            'STLs/Extruder/CW2_Cable_Bridge.stl',
+            # 'STLs/Extruder/CW2_Cable_Bridge.stl',
             # 'STLs/Extruder/PCB_mount_SB.stl',
-            'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
+            # 'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
             'STLs/Extruder/sb_adxl_mount_generic_15.5mm_c_c.stl',
             { 'STLs/Extruder/sb_adxl_washer_x2.stl': 2 },
         ],
@@ -28,9 +28,9 @@ plates = [
             'STLs/Extruder/stealthburner_printhead_revo_voron_{front,rear_cw2}.stl',
             'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
             'STLs/Extruder/motor_plate.stl',
-            'STLs/Extruder/CW2_Cable_Bridge.stl',
+            # 'STLs/Extruder/CW2_Cable_Bridge.stl',
             # 'STLs/Extruder/PCB_mount_SB.stl',
-            'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
+            # 'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
             'STLs/Extruder/sb_adxl_mount_generic_15.5mm_c_c.stl',
             { 'STLs/Extruder/sb_adxl_washer_x2.stl': 2 },
         ],
@@ -102,8 +102,8 @@ plates = [
             'STLs/tapchanger/Front.stl',
             'STLs/tapchanger/Tap_Magnet_{Left,Right}_r2.stl',
             'STLs/tapchanger/Dock{Base,NozzlePad,Pivot}.stl',
-            {'STLs/tapchanger/Distribution_box.stl': 1}, # , 'rotate-x': 270},
-            {'STLs/tapchanger/Exhaust_cover.stl': 1}, # , 'rotate-x': 270},
+            'STLs/tapchanger/StrainReliefAdapter.stl',
+            'STLs/tapchanger/Tap_Upper_PCB_r2.stl',
         ],
         output = "Plate/tapchanger.stl"
     ),
@@ -115,10 +115,12 @@ plates = [
     ),
     dict(
         source = [
-            {'STLs/tapchanger/[tpu]_Clip.stl_x6.stl': 1}, # , 'rotate-x': 270},
-            {'STLs/tapchanger/[tpu]_Strain_relief-Curved.stl': 1}, # , 'rotate-x': 270},
-            {'STLs/tapchanger/[tpu]_Strain_relief.stl': 1}, # , 'rotate-x': 270},
-            {'STLs/tapchanger/[tpu]_Plug-6mm.stl': 1}, # , 'rotate-x': 270},
+            { 'STLs/tapchanger/[tpu]_Clip.stl_x6.stl': 8 },
+            # 'STLs/tapchanger/[tpu]_Strain_relief-Curved.stl',
+            'STLs/tapchanger/[tpu]_Strain_relief.stl',
+            'STLs/tapchanger/[tpu]_Plug-6mm.stl',
+            'STLs/tapchanger/[tpu]_CableFlex.stl',
+            
         ],
         output = "Plate/tapchanger_[tpu].stl"
     ),
@@ -181,14 +183,6 @@ plates = [
     ### Panels
     dict(
         source = [
-            { 'STLs/Panels/[a]_exhaust_filter_mount_x2.stl': 2 },
-            # 'STLs/Panels/[a]_exhaust_fan_grill.stl',
-            # 'STLs/Panels/[a]_filter_acess_cover.stl',
-        ],
-        output = "Plate/panels_[a].stl"
-    ),
-    dict(
-        source = [
             { 'STLs/Panels/bottom_panel_clip_x4.stl': 4 },
             { 'STLs/Panels/bottom_panel_hinge_x2.stl': 2 },
         ],
@@ -211,12 +205,22 @@ plates = [
         ],
         output = "Plate/panels_door.stl"
     ),
-    # dict(
-    #     source = [
-    #         'STLs/Panels/exhaust_filter_{grill,housing}.stl',
-    #     ],
-    #     output = "Plate/exhaust.stl"
-    # ),
+    dict(
+        source = [
+            { 'STLs/Panels/[a]_exhaust_filter_mount_x2.stl': 2 },
+            # 'STLs/Panels/[a]_exhaust_fan_grill.stl',
+            # 'STLs/Panels/[a]_filter_acess_cover.stl',
+        ],
+        output = "Plate/exhaust_[a].stl"
+    ),
+    dict(
+        source = [
+            # 'STLs/Panels/exhaust_filter_{grill,housing}.stl',
+            'STLs/tapchanger/Distribution_box.stl',
+            'STLs/tapchanger/Exhaust_cover.stl',
+        ],
+        output = "Plate/exhaust.stl"
+    ),
 
     ### Other
     dict(
