@@ -55,7 +55,7 @@ plates = [
     ### Gantry
     dict(
         source = [
-            'STLs/Gantry/[a]_Tap_Center_r6.stl',
+            # 'STLs/Gantry/[a]_Tap_Center_r6.stl',
             'STLs/Gantry/[a]_tensioner_{left,right}.stl',
             { 'STLs/Gantry/[a]_z_chain_retainer_bracket_x2.stl': 2 },
             { 'STLs/Gantry/[a]_z_belt_clip_{lower,upper}_x4.stl': 4 },
@@ -252,7 +252,7 @@ plates = [
             'STLs/Electronics/Octopus_bracket_set.stl',
             { 'STLs/Electronics/pcb_din_clip_x3.stl': 3 },
             'STLs/Electronics/PSU_stabilizer_50mm.stl',
-            'STLs/Electronics/raspberry_pi_bracket.stl',
+            'STLs/Electronics/raspberrypi_bracket.stl',
             'STLs/Electronics/rs25_psu_bracket.stl',
         ],
         output = "Plate/electronics.stl"
@@ -269,6 +269,95 @@ plates = [
         source = ['STLs/Tools/*.stl', 'STLs/Tools/**/*.stl'],
         output = "Plate/tools.stl"
     ),
+
+    ### Enraged Rabbit
+    dict(
+        source = [
+            'STLs/EnragedRabbit/Carrot_Feeder/Tools/Calib_Test.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Tools/Pulley_Tool_NEMA17.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[black]_Encoder_Cage.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/2020_{Mount,Mount_Mirrored}.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Belt_Tensionner.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Drag_Chain_Anchor.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Encoder_Cart_{Left,Right}.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/ERCF_Easy_Brd_Bracket_Mount.stl',
+            {'STLs/EnragedRabbit/Carrot_Feeder/Filament_Block_xN.stl': 9},
+            'STLs/EnragedRabbit/Carrot_Feeder/Filament_Blocks_End.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Gate_Key.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Gear_Box_{Front,Back}.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Idler_Block.stl',
+            {'STLs/EnragedRabbit/Carrot_Feeder/Junction_Plate_Flat_x2.stl': 2},
+            'STLs/EnragedRabbit/Carrot_Feeder/Junction_Plate_Gear_Box.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Motor_Arm_NEMA17_EASYBRD.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Selector_Door.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Selector_Motor_Support.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/TCRT_Sensor_Anchor_Off_Centered.stl',
+            {'STLs/EnragedRabbit/Carrot_Feeder/Top_Hat_Locker_1_xN.stl': 9},
+        ],
+        output = "Plate/EnragedRabbit_CarrotFeeder.stl"
+    ),
+    dict(
+        source = [
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Bearing_Insert_Feet_x2.stl': 2},
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Bearing_Insert_x2.stl': 2},
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Bearing_Spacer_x2.stl': 2},
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Blocks_End_Feet.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Bottom_Panel.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Drag_Chain_Anchor_Bottom.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Encoder_Locker.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Knob.stl',
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Latch_xN.stl': 9},
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Logo_Plate.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_M4_80T_Wheel.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Magnetic_Gate_{0,1,2,3,4,5,6,7,8}.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Motor_Lock.stl',
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Screw_x3.stl': 3},
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Selector_Cart.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Servo_Arm.stl',
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Side_Latch_x2.stl': 2},
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Support_Feet_4mm_x4.stl': 4},
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Tag_Plate_{0,1,2,3,4,5,6,7,8}.stl',
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Top_Hat_xN.stl': 9},
+            'STLs/EnragedRabbit/Carrot_Feeder/[a]_Top_Panel.stl',
+        ],
+        output = "Plate/EnragedRabbit_CarrotFeeder_[a].stl"
+    ),
+    dict(
+        source = [
+            'STLs/EnragedRabbit/Carrot_Patch/608_Adapter.stl',
+            'STLs/EnragedRabbit/Carrot_Patch/Buffer_Axis.stl',
+            'STLs/EnragedRabbit/Carrot_Patch/Ptfe_Entry_M10.stl',
+            'STLs/EnragedRabbit/Carrot_Patch/Spool_Arm_Long.stl',
+        ],
+        output = "Plate/EnragedRabbit_CarrotPatch.stl"
+    ),
+    dict(
+        source = [
+            'STLs/EnragedRabbit/Carrot_Patch/Buffer_Cross.stl',
+        ],
+        output = "Plate/EnragedRabbit_CarrotPatch_Cross.stl"
+    ),
+    dict(
+        source = [
+            'STLs/EnragedRabbit/Carrot_Patch/Main_Body.stl',
+        ],
+        output = "Plate/EnragedRabbit_CarrotPatch_MainBody.stl"
+    ),
+    dict(
+        source = [
+            {'STLs/EnragedRabbit/Carrot_Patch/[a]_Feet_x2.stl': 2},
+            'STLs/EnragedRabbit/Carrot_Patch/[a]_Buffer_Wheel.stl',
+            {'STLs/EnragedRabbit/Carrot_Patch/[a]_Latch_x3.stl': 3},
+            'STLs/EnragedRabbit/Carrot_Patch/[a]_Sliding_Arm.stl',
+        ],
+        output = "Plate/EnragedRabbit_CarrotPatch_[a].stl"
+    ),
+    dict(
+        source = [
+            'STLs/EnragedRabbit/Carrot_Patch/[a]_Handle_{0,1,2,3,4,5,6,7,8}.stl',
+        ],
+        output = "Plate/EnragedRabbit_CarrotPatch_Handles_[a].stl"
+    ),
 ]
 
 for entry in plates:
@@ -284,8 +373,13 @@ for entry in plates:
         for (pattern, count) in patterns.items():
             for expanded in braceexpand(pattern):
                 escaped = re.sub('([\[\]])','[\\1]', expanded)
-                for file in glob.iglob(escaped):
+                globbed = [g for g in glob.iglob(escaped)]
+                if len(globbed) == 0:
+                    raise Exception('Glob expansion resulted in no matches: %s' % expanded)
+                for file in globbed:
                     for n in range(count):
+                        if not os.path.isfile(file):
+                            raise Exception('File does not exist: %s' % file)
                         files.append(shlex.quote(file))
 
     print(repr(files), "=>", repr(output))

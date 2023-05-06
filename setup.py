@@ -217,9 +217,9 @@ copies = [
 	dict(
         dir = "deps/EnragedRabbit/Carrot_Feeder/Stls",
         files = [
-            "Filament blocks/Magnetic Gates/[a]_Magnetic_Gate_{0,1,2,3,4,5,6,7,8}.stl",
+            dict(file="Filament blocks/Magnetic Gates/[a]_Magnetic_Gate_{0,1,2,3,4,5,6,7,8}.stl", rotate_z=90),
             "Filament blocks/Tag Plates/[a]_Tag_Plate_{0,1,2,3,4,5,6,7,8}.stl",
-            "Filament blocks/Top Hat Lockers/Top_Hat_Locker_{1,2,3,4,5}_xN.stl",
+            dict(file="Filament blocks/Top Hat Lockers/Top_Hat_Locker_{1,2,3,4,5}_xN.stl", rotate_z=90),
             "Filament blocks/{Filament_Block_xN,Filament_Blocks_End}.stl",
             "Filament blocks/[a]_Bearing_{Insert,Insert_Feet}_x2.stl",
             "Filament blocks/[a]_{Blocks_End_Feet,Latch_xN,Top_Hat_xN}.stl",
@@ -269,6 +269,10 @@ for entry in copies:
         if type(pattern) is dict:
             if 'rotate_x' in pattern:
                 options.append("--rotate-x=%s" % (pattern['rotate_x']))
+            if 'rotate_y' in pattern:
+                options.append("--rotate-y=%s" % (pattern['rotate_y']))
+            if 'rotate_z' in pattern:
+                options.append("--rotate=%s" % (pattern['rotate_z']))
             pattern = pattern['file']
         for file in braceexpand(pattern):
             basename = os.path.basename(file)
