@@ -215,6 +215,29 @@ copies = [
         output = "STLs/Accessories"
     ),
 	dict(
+        dir = "deps/",
+        files = [
+            "Side_Extrusion_Mount_Feet.stl",
+            "2020_Extrusion_Endcap_813368/files/Misumi_2020_Endcap_80u__v1-0.STL",
+        ],
+        output = "STLs/Accessories/Side_Extrusion_Mount"
+    ),
+	dict(
+        dir = "deps/VoronUsers/printer_mods/BladeScraper-Designs/Horizontal-Spool-Holder",
+        files = [
+            dict(file="Holder.stl", rename="Horizontal_Spool_Holder.stl"),
+        ],
+        output = "STLs/Accessories/"
+    ),
+	dict(
+        dir = "deps/VoronUsers/printer_mods/1-0-R/handle/STL/",
+        files = [
+            "[a]_handle_middle_part.stl",
+            "handle_{inner,outer}_part.stl",
+        ],
+        output = "STLs/Accessories/Handle"
+    ),
+	dict(
         dir = "deps/EnragedRabbit/Carrot_Feeder/Stls",
         files = [
             dict(file="Filament blocks/Magnetic Gates/[a]_Magnetic_Gate_{0,1,2,3,4,5,6,7,8}.stl", rotate_z=90),
@@ -266,6 +289,7 @@ for entry in copies:
 
     for pattern in entry['files']:
         options = []
+        rename = None
         if type(pattern) is dict:
             if 'rotate_x' in pattern:
                 options.append("--rotate-x=%s" % (pattern['rotate_x']))
@@ -273,17 +297,24 @@ for entry in copies:
                 options.append("--rotate-y=%s" % (pattern['rotate_y']))
             if 'rotate_z' in pattern:
                 options.append("--rotate=%s" % (pattern['rotate_z']))
+            if 'rename' in pattern:
+                rename = pattern['rename']
             pattern = pattern['file']
         for file in braceexpand(pattern):
             basename = os.path.basename(file)
             src = f"{dir}/{file}"
-            dst = f"{output}/{basename}".replace(" ", "_")
+            if rename:
+                dst = f"{output}/{rename}".replace(" ", "_")
+            else:
+                dst = f"{output}/{basename}".replace(" ", "_")
             dst = re.sub(r"\.STL$", ".stl", dst)
             dst = re.sub(r"\[a\]([^_])", r"[a]_\1", dst)
 
             if len(options) > 0:
                 src = shlex.quote(src)
-                os.system("%s %s" % (slicer_bin,  slicer_options % (dst, ' '.join(options), src)))
+                cmd = "%s %s" % (slicer_bin,  slicer_options % (dst, ' '.join(options), src))
+                # print(cmd)
+                os.system(cmd)
             else:
                 shutil.copyfile(src, dst)
             print(repr(src), "=>", repr(dst))

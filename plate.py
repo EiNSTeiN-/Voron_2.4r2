@@ -238,6 +238,31 @@ plates = [
         output = "Plate/accessories_revo_nozzle_holder.stl"
     ),
     dict(
+        source = [
+            {'STLs/Accessories/Side_Extrusion_Mount/Side_Extrusion_Mount_Feet.stl': 2},
+            {'STLs/Accessories/Side_Extrusion_Mount/Misumi_2020_Endcap_80u__v1-0.stl': 2},
+        ],
+        output = "Plate/accessories_side_extrusion_mount_[a].stl"
+    ),
+    dict(
+        source = [
+            'STLs/Accessories/Horizontal_Spool_Holder.stl',
+        ],
+        output = "Plate/accessories_horizontal_spool_holder.stl"
+    ),
+    dict(
+        source = [
+            {'STLs/Accessories/Handle/handle_{inner,outer}_part.stl': 2},
+        ],
+        output = "Plate/accessories_handle.stl"
+    ),
+    dict(
+        source = [
+            {'STLs/Accessories/Handle/[a]_handle_middle_part.stl': 2},
+        ],
+        output = "Plate/accessories_handle_[a].stl"
+    ),
+    dict(
         source = [{ 'STLs/Accessories/LED_Bar_Clip_Misumi_version2.stl': 29 }], # fits 29 behind Z belts on 350mm printer
         output = "Plate/accessories_led_bar_clips.stl"
     ),
