@@ -232,6 +232,12 @@ plates = [
     ),
     dict(
         source = [
+            {'STLs/Accessories/pfte_tube_magnetic_coupler.stl': 4},
+        ],
+        output = "Plate/accessories_pfte_tube_magnetic_couplers_[a].stl"
+    ),
+    dict(
+        source = [
             'STLs/Accessories/voron-bracket-revo-connect-6-mm-panel-m3-screw.3mf',
             'STLs/Accessories/*_Nozzle_Holder.stl',
         ],

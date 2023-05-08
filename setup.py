@@ -238,6 +238,13 @@ copies = [
         output = "STLs/Accessories/Handle"
     ),
 	dict(
+        dir = "deps/join-ptfe-tubes-together-magnetically-model_files",
+        files = [
+            dict(file="NoOffset (Default).stl", rename="pfte_tube_magnetic_coupler.stl"),
+        ],
+        output = "STLs/Accessories"
+    ),
+	dict(
         dir = "deps/EnragedRabbit/Carrot_Feeder/Stls",
         files = [
             dict(file="Filament blocks/Magnetic Gates/[a]_Magnetic_Gate_{0,1,2,3,4,5,6,7,8}.stl", rotate_z=90),
