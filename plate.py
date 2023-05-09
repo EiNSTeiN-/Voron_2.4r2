@@ -238,7 +238,7 @@ plates = [
     ),
     dict(
         source = [
-            {'STLs/Accessories/2020_Profile_Cover.stl': 18},
+            {'STLs/Accessories/[a]_2020_Profile_Cover.stl': 18},
         ],
         output = "Plate/accessories_profile_covers_[a].stl"
     ),
@@ -258,7 +258,7 @@ plates = [
     ),
     dict(
         source = [
-            'STLs/Accessories/Horizontal_Spool_Holder.stl',
+            {'STLs/Accessories/Horizontal_Spool_Holder.stl': 2},
         ],
         output = "Plate/accessories_horizontal_spool_holder.stl"
     ),
