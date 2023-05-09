@@ -245,6 +245,13 @@ copies = [
         output = "STLs/Accessories"
     ),
 	dict(
+        dir = "deps/VoronUsers/printer_mods/chri.kai.in/20x20mm_Profile_Covers/STL",
+        files = [
+            dict(file="2020_Profile_Cover.stl", rename="[a]_2020_Profile_Cover.stl"),
+        ],
+        output = "STLs/Accessories"
+    ),
+	dict(
         dir = "deps/EnragedRabbit/Carrot_Feeder/Stls",
         files = [
             dict(file="Filament blocks/Magnetic Gates/[a]_Magnetic_Gate_{0,1,2,3,4,5,6,7,8}.stl", rotate_z=90),

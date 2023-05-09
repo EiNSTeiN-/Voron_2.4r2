@@ -238,6 +238,12 @@ plates = [
     ),
     dict(
         source = [
+            {'STLs/Accessories/2020_Profile_Cover.stl': 18},
+        ],
+        output = "Plate/accessories_profile_covers_[a].stl"
+    ),
+    dict(
+        source = [
             'STLs/Accessories/voron-bracket-revo-connect-6-mm-panel-m3-screw.3mf',
             'STLs/Accessories/*_Nozzle_Holder.stl',
         ],
