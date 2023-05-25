@@ -112,18 +112,18 @@ copies = [
 	dict(
         dir = "deps/tapchanger/stls",
         files = [
-            "Shuttle/[a] Shuttle.stl",
+            dict(file="Shuttle/[a] Shuttle.stl",rotate_x=270),
             dict(file="Shuttle/[tpu] Plug-6mm.stl",rotate_x=270),
             dict(file="Stealthburner plate/Front.stl",rotate_x=90),
             "Stealthburner plate/Tap_Magnet_{Left,Right}_r2.stl",
             "Dock/Dock{Base,NozzlePad,Pivot}.stl",
             dict(file="Distribution Box/[tpu] Clip.stl_x6.stl",rotate_x=270),
-            # dict(file="Distribution Box/[tpu] Strain_relief-Curved.stl",rotate_x=270),
-            dict(file="Distribution Box/[tpu] Strain_relief.stl",rotate_x=270),
+            dict(file="Distribution Box/[tpu] Strain_relief-Curved.stl",rotate_x=270),
+            # dict(file="Distribution Box/[tpu] Strain_relief.stl",rotate_x=270),
             dict(file="Distribution Box/Distribution_box.stl",rotate_x=270),
             dict(file="Distribution Box/Exhaust_cover.stl",rotate_x=90),
             "Strain relief/[tpu] CableFlex.stl",
-            dict(file="Strain relief/StrainReliefAdapter.stl",rotate_x=180),
+            dict(file="Strain relief/StrainReliefAdapter.stl",rotate_x=90),
         ],
         output = "STLs/tapchanger"
     ),
@@ -143,6 +143,7 @@ copies = [
             "Stealthburner/[o]_stealthburner_LED_carrier.stl",
             "Stealthburner/Printheads/phaetus_dragon/stealthburner_printhead_dragon_{front,rear_cw2}.stl",
             "Stealthburner/Printheads/revo_voron/stealthburner_printhead_revo_voron_{front,rear_cw2}.stl",
+            "Stealthburner/Printheads/phaetus_rapido/stealthburner_printhead_rapido_{front,rear_cw2}.stl",
             "Stealthburner/ADXL345_Mounts/sb_adxl_{mount_generic_15.5mm_c_c,washer_x2}.stl",
             "Clockwork2/motor_plate.stl",
             "Clockwork2/[a]_guidler_{a,b}.stl",
@@ -203,7 +204,7 @@ copies = [
 	dict(
         dir = "deps/revo-connect-holders",
         files = [
-            "{0.15,0.25,0.4,0.6,0.8,1.0} Nozzle Holder.stl",
+            "{0.15,0.25,0.4,0.6,0.8,1.0,1.2} Nozzle Holder.stl",
         ],
         output = "STLs/Accessories"
     ),
@@ -260,7 +261,7 @@ copies = [
             "Filament blocks/{Filament_Block_xN,Filament_Blocks_End}.stl",
             "Filament blocks/[a]_Bearing_{Insert,Insert_Feet}_x2.stl",
             "Filament blocks/[a]_{Blocks_End_Feet,Latch_xN,Top_Hat_xN}.stl",
-            "Gear box/EASY BRD Option/Motor_Arm_NEMA17_EASYBRD.stl",
+            "Gear box/EASY BRD Option/Motor_Arm_NEMA14_EASYBRD.stl",
             "Gear box/Gear_Box_{Front,Back}.stl",
             "Gear box/[a]_{Bearing_Spacer_x2,Bottom_Panel,Knob,Logo_Plate,M4_80T_Wheel,Side_Latch_x2,Top_Panel}.stl",
             "Linear axis/{Idler_Block,Selector_Motor_Support}.stl",
@@ -281,7 +282,7 @@ copies = [
         dir = "deps/EnragedRabbit/Carrot_Feeder/Stls",
         files = [
             "Tools/Calib_Test.stl",
-            "Tools/Pulley_Tool_NEMA17.stl",
+            "Tools/Pulley_Tool_NEMA14.stl",
         ],
         output = "STLs/EnragedRabbit/Carrot_Feeder/Tools"
     ),

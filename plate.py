@@ -15,11 +15,6 @@ plates = [
             'STLs/Extruder/stealthburner_printhead_dragon_{front,rear_cw2}.stl',
             'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
             'STLs/Extruder/motor_plate.stl',
-            # 'STLs/Extruder/CW2_Cable_Bridge.stl',
-            # 'STLs/Extruder/PCB_mount_SB.stl',
-            # 'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
-            'STLs/Extruder/sb_adxl_mount_generic_15.5mm_c_c.stl',
-            { 'STLs/Extruder/sb_adxl_washer_x2.stl': 2 },
         ],
         output = "Plate/extruder_phaetus_dragon.stl"
     ),
@@ -28,13 +23,23 @@ plates = [
             'STLs/Extruder/stealthburner_printhead_revo_voron_{front,rear_cw2}.stl',
             'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
             'STLs/Extruder/motor_plate.stl',
-            # 'STLs/Extruder/CW2_Cable_Bridge.stl',
-            # 'STLs/Extruder/PCB_mount_SB.stl',
-            # 'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
+        ],
+        output = "Plate/extruder_revo_voron.stl"
+    ),
+    dict(
+        source = [
+            'STLs/Extruder/stealthburner_printhead_rapido_{front,rear_cw2}.stl',
+            'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
+            'STLs/Extruder/motor_plate.stl',
+        ],
+        output = "Plate/extruder_phaetus_rapido.stl"
+    ),
+    dict(
+        source = [
             'STLs/Extruder/sb_adxl_mount_generic_15.5mm_c_c.stl',
             { 'STLs/Extruder/sb_adxl_washer_x2.stl': 2 },
         ],
-        output = "Plate/extruder_revo_voron.stl"
+        output = "Plate/extruder_generic_adxl.stl"
     ),
     dict(
         source = [
@@ -116,8 +121,8 @@ plates = [
     dict(
         source = [
             { 'STLs/tapchanger/[tpu]_Clip.stl_x6.stl': 8 },
-            # 'STLs/tapchanger/[tpu]_Strain_relief-Curved.stl',
-            'STLs/tapchanger/[tpu]_Strain_relief.stl',
+            'STLs/tapchanger/[tpu]_Strain_relief-Curved.stl',
+            # 'STLs/tapchanger/[tpu]_Strain_relief.stl',
             'STLs/tapchanger/[tpu]_Plug-6mm.stl',
             'STLs/tapchanger/[tpu]_CableFlex.stl',
             
@@ -311,9 +316,10 @@ plates = [
     dict(
         source = [
             'STLs/EnragedRabbit/Carrot_Feeder/Tools/Calib_Test.stl',
-            'STLs/EnragedRabbit/Carrot_Feeder/Tools/Pulley_Tool_NEMA17.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Tools/Pulley_Tool_NEMA14.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/[black]_Encoder_Cage.stl',
-            'STLs/EnragedRabbit/Carrot_Feeder/2020_{Mount,Mount_Mirrored}.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/2020_Mount_Mirrored.stl',
+            {'STLs/EnragedRabbit/Carrot_Feeder/2020_Mount.stl': 3},
             'STLs/EnragedRabbit/Carrot_Feeder/Belt_Tensionner.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/Drag_Chain_Anchor.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/Encoder_Cart_{Left,Right}.stl',
@@ -323,9 +329,9 @@ plates = [
             'STLs/EnragedRabbit/Carrot_Feeder/Gate_Key.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/Gear_Box_{Front,Back}.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/Idler_Block.stl',
-            {'STLs/EnragedRabbit/Carrot_Feeder/Junction_Plate_Flat_x2.stl': 2},
+            {'STLs/EnragedRabbit/Carrot_Feeder/Junction_Plate_Flat_x2.stl': 3},
             'STLs/EnragedRabbit/Carrot_Feeder/Junction_Plate_Gear_Box.stl',
-            'STLs/EnragedRabbit/Carrot_Feeder/Motor_Arm_NEMA17_EASYBRD.stl',
+            'STLs/EnragedRabbit/Carrot_Feeder/Motor_Arm_NEMA14_EASYBRD.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/Selector_Door.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/Selector_Motor_Support.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/TCRT_Sensor_Anchor_Off_Centered.stl',
@@ -348,7 +354,7 @@ plates = [
             'STLs/EnragedRabbit/Carrot_Feeder/[a]_M4_80T_Wheel.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/[a]_Magnetic_Gate_{0,1,2,3,4,5,6,7,8}.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/[a]_Motor_Lock.stl',
-            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Screw_x3.stl': 3},
+            {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Screw_x3.stl': 4},
             'STLs/EnragedRabbit/Carrot_Feeder/[a]_Selector_Cart.stl',
             'STLs/EnragedRabbit/Carrot_Feeder/[a]_Servo_Arm.stl',
             {'STLs/EnragedRabbit/Carrot_Feeder/[a]_Side_Latch_x2.stl': 2},
