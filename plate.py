@@ -28,11 +28,12 @@ plates = [
     ),
     dict(
         source = [
-            'STLs/Extruder/stealthburner_printhead_rapido_{front,rear_cw2}.stl',
+            'STLs/Extruder/stealthburner_printhead_rapido_rear_cw2.stl',
+            'STLs/Extruder/Stealth_Rapido_UHF_Toolhead_Front.stl',
             'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
             'STLs/Extruder/motor_plate.stl',
         ],
-        output = "Plate/extruder_phaetus_rapido.stl"
+        output = "Plate/extruder_phaetus_rapido_uhf.stl"
     ),
     dict(
         source = [
@@ -43,10 +44,23 @@ plates = [
     ),
     dict(
         source = [
-            'STLs/Extruder/[a]_*.stl',
-            # 'STLs/Extruder/Cam_mount_SB.stl',
+            'STLs/Extruder/[a]_guidler_{a,b}.stl',
+            'STLs/Extruder/[a]_latch_shuttle.stl',
+            'STLs/Extruder/[a]_latch.stl',
+            'STLs/Extruder/[a]_pcb_spacer.stl',
+            'STLs/Extruder/[a]_stealthburner_main_body.stl',
         ],
         output = "Plate/extruder_[a].stl"
+    ),
+    dict(
+        source = [
+            'STLs/Extruder/[a]_guidler_{a,b}.stl',
+            'STLs/Extruder/[a]_latch_shuttle.stl',
+            'STLs/Extruder/[a]_latch.stl',
+            'STLs/Extruder/[a]_pcb_spacer.stl',
+            'STLs/Extruder/[a]_Stealth_Rapido_UHF_Front.stl',
+        ],
+        output = "Plate/extruder_phaetus_rapido_uhf_[a].stl"
     ),
     dict(
         source = ['STLs/Extruder/[c]_*.stl'],

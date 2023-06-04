@@ -143,11 +143,19 @@ copies = [
             "Stealthburner/[o]_stealthburner_LED_carrier.stl",
             "Stealthburner/Printheads/phaetus_dragon/stealthburner_printhead_dragon_{front,rear_cw2}.stl",
             "Stealthburner/Printheads/revo_voron/stealthburner_printhead_revo_voron_{front,rear_cw2}.stl",
-            "Stealthburner/Printheads/phaetus_rapido/stealthburner_printhead_rapido_{front,rear_cw2}.stl",
+            "Stealthburner/Printheads/phaetus_rapido/stealthburner_printhead_rapido_rear_cw2.stl",
             "Stealthburner/ADXL345_Mounts/sb_adxl_{mount_generic_15.5mm_c_c,washer_x2}.stl",
             "Clockwork2/motor_plate.stl",
             "Clockwork2/[a]_guidler_{a,b}.stl",
             "Clockwork2/[a]_{latch_shuttle,latch,pcb_spacer}.stl",
+        ],
+        output = "STLs/Extruder"
+    ),
+	dict(
+        dir = "deps/VoronUsers/printer_mods/bythorsthunder/Stealthburner_Rapido_Uhf/STL_FILES",
+        files = [
+            "Stealth_Rapido_UHF_Toolhead_Front.stl",
+            "[a]_Stealth_Rapido_UHF_Front.stl",
         ],
         output = "STLs/Extruder"
     ),

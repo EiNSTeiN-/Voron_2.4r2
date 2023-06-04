@@ -38,3 +38,6 @@
 [submodule "deps/tapchanger"]
 	path = deps/tapchanger
 	url = https://github.com/viesturz/tapchanger
+[submodule "deps/NozzleAlign"]
+	path = deps/NozzleAlign
+	url = https://github.com/viesturz/NozzleAlign
