@@ -5,7 +5,7 @@ import os
 import re
 import glob
 
-slicer_bin = '/home/einstein/PrusaSlicer-2.5.0+linux-x64-GTK3-202209060725.AppImage'
+slicer_bin = '/home/einstein/PrusaSlicer-2.6.0+linux-x64-GTK3-202306191220.AppImage'
 options = '--export-stl --ensure-on-bed --align-xy 0,0 --center 175,175 --repair --output %s %s --merge %s'
 
 extruder_common = [

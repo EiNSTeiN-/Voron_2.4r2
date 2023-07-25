@@ -4,7 +4,7 @@ import shutil, shlex
 import os
 import re
 
-slicer_bin = '/home/einstein/PrusaSlicer-2.5.0+linux-x64-GTK3-202209060725.AppImage'
+slicer_bin = '/home/einstein/PrusaSlicer-2.6.0+linux-x64-GTK3-202306191220.AppImage'
 slicer_options = '--export-stl --ensure-on-bed --repair --output %s %s %s'
 
 copies = [
