@@ -8,31 +8,33 @@ import glob
 slicer_bin = '/home/einstein/PrusaSlicer-2.5.0+linux-x64-GTK3-202209060725.AppImage'
 options = '--export-stl --ensure-on-bed --align-xy 0,0 --center 175,175 --repair --output %s %s --merge %s'
 
+extruder_common = [
+    'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
+    'STLs/Extruder/motor_plate.stl',
+    'STLs/Extruder/CW2_Cable_Bridge.stl',
+    'STLs/Extruder/Printed_Part_for_CAN_Cable.stl',
+    'STLs/Extruder/Printed_Part_for_CAN_Cable_v1.1_remixed.stl',
+]
+
 plates = [
     ### Extruder
     dict(
         source = [
             'STLs/Extruder/stealthburner_printhead_dragon_{front,rear_cw2}.stl',
-            'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
-            'STLs/Extruder/motor_plate.stl',
-        ],
+        ] + extruder_common,
         output = "Plate/extruder_phaetus_dragon.stl"
     ),
     dict(
         source = [
             'STLs/Extruder/stealthburner_printhead_revo_voron_{front,rear_cw2}.stl',
-            'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
-            'STLs/Extruder/motor_plate.stl',
-        ],
+        ] + extruder_common,
         output = "Plate/extruder_revo_voron.stl"
     ),
     dict(
         source = [
             'STLs/Extruder/stealthburner_printhead_rapido_rear_cw2.stl',
             'STLs/Extruder/Stealth_Rapido_UHF_Toolhead_Front.stl',
-            'STLs/Extruder/{main_body,cable_door}_EBB_SB.stl',
-            'STLs/Extruder/motor_plate.stl',
-        ],
+        ] + extruder_common,
         output = "Plate/extruder_phaetus_rapido_uhf.stl"
     ),
     dict(
@@ -117,11 +119,10 @@ plates = [
     ### tapchanger
     dict(
         source = [
-            'STLs/tapchanger/tap_becon_v6.stl',
             'STLs/tapchanger/Front.stl',
             'STLs/tapchanger/Tap_Magnet_{Left,Right}_r2.stl',
             'STLs/tapchanger/Dock{Base,NozzlePad,Pivot}.stl',
-            'STLs/tapchanger/StrainReliefAdapter.stl',
+            # 'STLs/tapchanger/StrainReliefAdapter.stl',
             'STLs/tapchanger/Tap_Upper_PCB_r2.stl',
         ],
         output = "Plate/tapchanger.stl"
@@ -138,7 +139,7 @@ plates = [
             'STLs/tapchanger/[tpu]_Strain_relief-Curved.stl',
             # 'STLs/tapchanger/[tpu]_Strain_relief.stl',
             'STLs/tapchanger/[tpu]_Plug-6mm.stl',
-            'STLs/tapchanger/[tpu]_CableFlex.stl',
+            # 'STLs/tapchanger/[tpu]_CableFlex.stl',
             
         ],
         output = "Plate/tapchanger_[tpu].stl"

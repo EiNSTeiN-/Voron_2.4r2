@@ -122,15 +122,8 @@ copies = [
             # dict(file="Distribution Box/[tpu] Strain_relief.stl",rotate_x=270),
             dict(file="Distribution Box/Distribution_box.stl",rotate_x=270),
             dict(file="Distribution Box/Exhaust_cover.stl",rotate_x=90),
-            "Strain relief/[tpu] CableFlex.stl",
-            dict(file="Strain relief/StrainReliefAdapter.stl",rotate_x=90),
-        ],
-        output = "STLs/tapchanger"
-    ),
-	dict(
-        dir = "deps/beacon-probe-mount-for-voron-tap-stealthburner-model_files",
-        files = [
-            "tap becon v6.stl",
+            # "Strain relief/[tpu] CableFlex.stl",
+            # dict(file="Strain relief/StrainReliefAdapter.stl",rotate_x=90),
         ],
         output = "STLs/tapchanger"
     ),
@@ -163,8 +156,15 @@ copies = [
         dir = "deps/BTT-EBB/EBB SB2240_2209 CAN/Custom Printed Parts",
         files = [
             "{cable_door,main_body}_EBB_SB.stl",
-            # "CW2 Cable Bridge.STL",
-            # "Printed Part for CAN Cable.stl",
+            "CW2 Cable Bridge.STL",
+            "Printed Part for CAN Cable.stl",
+        ],
+        output = "STLs/Extruder"
+    ),
+	dict(
+        dir = "deps/SB2209_CAN_cable_remixed_from_EBB_original_6105666/files",
+        files = [
+            "Printed_Part_for_CAN_Cable_v1.1_remixed.stl",
         ],
         output = "STLs/Extruder"
     ),
