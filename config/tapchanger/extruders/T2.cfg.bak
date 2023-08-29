@@ -6,7 +6,7 @@
 # See docs/Config_Reference.md for a description of parameters.
 
 [mcu EBBCan_t2]
-canbus_uuid: e60bac17e3ac
+canbus_uuid: 13c9ba9d450b # SB2209
 
 [temperature_sensor EBB_NTC_t2]
 sensor_type: Generic 3950
@@ -36,17 +36,17 @@ rotation_distance: 22.2072289171
 nozzle_diameter: 0.400
 filament_diameter: 1.750
 heater_pin: EBBCan_t2: PB13
-sensor_type: EPCOS 100K B57560G104F
+sensor_type: ATC Semitec 104NT-4-R025H42G # Revo Voron
 sensor_pin: EBBCan_t2: PA3
 control: pid
 pid_Kp: 27.813
 pid_Ki: 1.315
 pid_Kd: 147.063
 min_temp: 10
-max_temp: 350
+max_temp: 290
 max_power: 1.0
 min_extrude_temp: 170
-max_extrude_cross_section: 3
+max_extrude_cross_section: 5
 
 # sensor_type:MAX31865
 # sensor_pin: EBBCan: PA4
@@ -55,14 +55,16 @@ max_extrude_cross_section: 3
 # rtd_reference_r: 430
 # rtd_num_of_wires: 2
 
-[tmc2240 extruder2]
-cs_pin: EBBCan_t2: PA15
-spi_software_sclk_pin: EBBCan_t2: PB10
-spi_software_mosi_pin: EBBCan_t2: PB11
-spi_software_miso_pin: EBBCan_t2: PB2
-driver_TPFD: 0
+[tmc2209 extruder2]
+uart_pin: EBBCan_t2: PA15
 run_current: 0.650
 stealthchop_threshold: 0
+
+[filament_motion_sensor filament_sensor_t2]
+detection_length: 7
+extruder: extruder2
+switch_pin: EBBCan_t2: PB6
+pause_on_runout: True
 
 [fan_generic parts_cooling_fan_t2]
 pin: EBBCan_t2: PA1
@@ -134,7 +136,7 @@ fan: parts_cooling_fan_t2
 # X+84 (dock width)
 park: 174.2, 3.5, 260
 # X unused, Y = safe distance from dock, Z unused
-zone: 0, 100, 0
+zone: 0, 120, 0
 # Offset relative to other tools. Tool 0 generally should have 0 offset, but not required.
 offset: 0.3,0.20,-1.05
 meltzonelength: 18
